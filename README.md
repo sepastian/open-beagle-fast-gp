@@ -15,27 +15,33 @@ Feedback is very welcome!
 Installation
 ------------
 
-FGP requires [OpenBEAGLE-4.0.0-alpha2](https://code.google.com/p/beagle/), which in turn requires [pacc-1.4.1](http://sourceforge.net/projects/pacc/).
+For building, cmake, make and other tools are required.
+If you are on a Debian-based system, you can just do:
 
-  wget https://code.google.com/p/beagle/downloads/detail?name=OpenBEAGLE-4.0.0-alpha2-Source.tar.gz
-  tar xf OpenBEAGLE-4.0.0-alpha2-Source.tar.gz
-  cd OpenBEAGLE-4.0.0-alpha2-Source.tar.gz
-  cmake .
-  make
-  sudo make install  # install into /usr/local
+    sudo apt-get install cmake build-essential
 
-  wget https://code.google.com/p/beagle/downloads/detail?name=pacc-1.4.1-Source.tar.gz
-  tar xf pacc-1.4.1-Source.tar.gz
-  cd pacc-1.4.1-Source.tar.gz
-  cmake .
-  make
-  sudo make install  # install into /usr/local
+Then, [OpenBEAGLE-4.0.0-alpha2](https://code.google.com/p/beagle/) and, in turn, [pacc-1.4.1](http://sourceforge.net/projects/pacc/) must be compiled and installed.
+(Everything will be installed under /usr/local by default.)
 
-  git clone https://github.com/sepastian/open-beagle-fast-gp
-  cd open-beagle-fast-gp
-  cmake .
-  make
-  ./gp  # success!
+    wget https://beagle.googlecode.com/files/pacc-1.4.1-Source.tar.gz
+    tar xf pacc-1.4.1-Source.tar.gz
+    cd pacc-1.4.1-Source
+    cmake .
+    make
+    sudo make install  # install into /usr/local
+
+    wget https://beagle.googlecode.com/files/OpenBEAGLE-4.0.0-alpha2-Source.tar.gz
+    tar xf OpenBEAGLE-4.0.0-alpha2-Source.tar.gz
+    cd OpenBEAGLE-4.0.0-alpha2-Source
+    cmake .
+    make
+    sudo make install  # install into /usr/local
+
+    git clone https://github.com/sepastian/open-beagle-fast-gp
+    cd open-beagle-fast-gp
+    cmake .
+    make
+    ./gp  # success!
 
 Usage
 -----
